@@ -450,6 +450,123 @@ img  { display: block; max-width: 100%; }
 }
 
 /* ════════════════════════════════════════════════════════
+   CONTACT MODAL
+════════════════════════════════════════════════════════ */
+.nav-contact-btn {
+  background: none;
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  line-height: 1;
+}
+
+.nav-contact-btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.open {
+  display: flex;
+}
+
+.modal-box {
+  position: relative;
+  background: #0d0d0d;
+  border: 1px solid #242424;
+  padding: 52px 48px 48px;
+  width: min(480px, 90vw);
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0;
+}
+
+.modal-close:hover {
+  color: var(--accent);
+}
+
+.modal-title {
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 36px;
+  line-height: 1;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.contact-list li {
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-list li:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  color: var(--text-dim);
+  font-size: 0.88rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+.contact-link:hover {
+  color: var(--text);
+}
+
+.contact-link:hover .contact-icon {
+  color: var(--accent);
+}
+
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--text-dim);
+  transition: color 0.2s;
+}
+
+/* ════════════════════════════════════════════════════════
    FOOTER
 ════════════════════════════════════════════════════════ */
 .footer {

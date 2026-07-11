@@ -188,3 +188,33 @@ function updateActiveLink() {
 
 window.addEventListener('scroll', updateActiveLink, { passive: true });
 updateActiveLink();
+
+/* ════════════════════════════════════════════════════════
+   CONTACT MODAL
+════════════════════════════════════════════════════════ */
+const contactModal = document.getElementById('contactModal');
+const openContact  = document.getElementById('openContact');
+const closeContact = document.getElementById('closeContact');
+
+openContact.addEventListener('click', () => {
+  contactModal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  /* close mobile nav if open */
+  navLinks.classList.remove('open');
+  navToggle.classList.remove('open');
+});
+
+function closeModal() {
+  contactModal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+closeContact.addEventListener('click', closeModal);
+
+contactModal.addEventListener('click', e => {
+  if (e.target === contactModal) closeModal();
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+});
