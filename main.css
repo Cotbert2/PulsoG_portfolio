@@ -133,7 +133,21 @@ img  { display: block; max-width: 100%; }
 }
 
 .hero-inner {
-  max-width: 900px;
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  gap: clamp(48px, 6vw, 100px);
+  align-items: flex-start;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-right {
+  flex: 0 0 260px;
+  padding-top: 8px;
 }
 
 .hero-label {
@@ -492,6 +506,16 @@ img  { display: block; max-width: 100%; }
   /* hero */
   .hero {
     padding-top: calc(var(--nav-h) + 40px);
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .hero-right {
+    flex: none;
+    width: 100%;
   }
 
   /* carousel buttons */
