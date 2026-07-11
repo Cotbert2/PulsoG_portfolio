@@ -417,24 +417,6 @@ img  { display: block; max-width: 100%; }
   color: var(--accent);
 }
 
-/* posters próximamente */
-.posters-soon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 30vh;
-  border: 1px dashed #242424;
-  margin: 0 var(--page-pad);
-}
-
-.posters-soon span {
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: #333;
-}
-
 .skill-list--tools li {
   display: flex;
   align-items: center;
